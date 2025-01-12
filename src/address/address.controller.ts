@@ -20,8 +20,6 @@ export class AddressController {
         @Body() createAddressDTO: CreateAddressDTO,
         @UserId() userId: number
     ): Promise<AddressEntity> {
-
-        console.log('userId: ', userId)
         return this. addressService.createAddress(createAddressDTO, userId);
     }
 }
