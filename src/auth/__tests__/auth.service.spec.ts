@@ -61,9 +61,9 @@ describe('AuthService', () => {
   });
 
   it('should return error', async () => {
-    jest.spyOn(userService, 'findUserByEmail').mockRejectedValue(BadRequestException);
+    jest.spyOn(userService, 'findUserByEmail').mockRejectedValue(new Error());
 
-    expect(service.login(loginUserMock)).rejects.toThrow(BadRequestException);
+    expect(service.login(loginUserMock)).rejects.toThrow(UnauthorizedException);
   });
 
 });
