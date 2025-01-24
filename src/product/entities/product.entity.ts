@@ -1,6 +1,7 @@
-import { CategoryEntity } from "src/category/entities/category.entity";
-import { Column, CreateDateColumn, JoinColumn, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import { CategoryEntity } from "../../category/entities/category.entity";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
 
+@Entity({ name: 'product' })
 export class ProductEntity {
     @PrimaryGeneratedColumn('rowid')
     id: number;
